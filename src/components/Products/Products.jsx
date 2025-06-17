@@ -1,10 +1,11 @@
 
 import React from 'react';
+import './Products.css';
 
 const Products = () => {
   return (
-    <div>
-      안녕하세요
+    <div className='Products-container'>
+      오시는길
     </div>
   );
 };

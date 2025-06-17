@@ -1,10 +1,11 @@
 
 import React from 'react';
+import './CS.css';
 
 const CS = () => {
   return (
-    <div>
-      안녕하세요
+    <div className="CS-container">
+      고객지원
     </div>
   );
 };

@@ -1,10 +1,11 @@
 
 import React from 'react';
+import './Main.css';
 
 const Main = () => {
   return (
-    <div>
-      안녕하세요
+    <div className='Main-container'>
+      메인
     </div>
   );
 };

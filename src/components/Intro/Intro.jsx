@@ -1,10 +1,11 @@
 
 import React from 'react';
+import './Intro.css';
 
 const Intro = () => {
   return (
-    <div>
-      안녕하세요
+    <div className="Intro-container">
+      회사소개
     </div>
   );
 };
