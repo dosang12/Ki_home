@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
-import GNB from './components/Gnb/GNB';
+import GNB from './components/GNB/GNB';
 import Main from './components/Main/Main';
 import Intro from './components/Intro/Intro';
 import Products from './components/Products/Products';

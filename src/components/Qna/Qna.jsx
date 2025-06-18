@@ -4,9 +4,9 @@ import './Qna.css';
 
 const Qna = () => {
   return (
-    <div className='Qna-container'>
-      문의하기
-    </div>
+    <section id="Qna" className="Qna-container">
+      문의하기
+    </section>
   );
 };
 

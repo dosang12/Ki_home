@@ -4,9 +4,9 @@ import './CS.css';
 
 const CS = () => {
   return (
-    <div className="CS-container">
-      고객지원
-    </div>
+    <section id="CS" className="CS-container">
+      고객지원
+    </section>
   );
 };
 
