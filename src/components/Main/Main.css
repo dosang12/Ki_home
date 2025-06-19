@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden; /* 추가해도 되고, 안 해도 됩니다 */
+  margin-bottom: 0 !important;
 }
 
 .Main-left {

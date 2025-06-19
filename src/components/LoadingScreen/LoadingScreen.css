@@ -8,8 +8,13 @@
   justify-content: center;
   height: 100vh;
   background-color: white;
+  transition: opacity 0.8s ease; /* ✅ 부드러운 페이드아웃을 위한 트랜지션 */
+  opacity: 1;
 }
-
+.loading-container.fade-out {
+  opacity: 0;
+  pointer-events: none; /* 클릭 방지 */
+}
 .loading-text {
   font-family: 'Pretendard', sans-serif;
   font-size: 24px;
