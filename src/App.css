@@ -2,6 +2,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.app-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; /* 수직 방향으로 강제 snap */
+  scroll-behavior: smooth;        /* 부드러운 스크롤 */
+}
+
+.app-wrapper > section {
+  height: 100vh;
+  scroll-snap-align: start;      /* 섹션 시작점에서 snap */
+}
+
 
 .App {
   text-align: center;
@@ -44,3 +56,4 @@ html {
 section {
   font-size: 0;
 }
+

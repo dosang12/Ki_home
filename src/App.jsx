@@ -16,12 +16,7 @@ const App = () => {
         <LoadingScreen setLoading={setLoading} />
       ) : (
         <>
-          <GNB />
-          <Main />
-          <Intro />
-          <Products />
-          <CS />
-          <Qna />
+          <GNB/><Main/><Intro/><Products/><CS/><Qna/>
         </>
       )}
     </div>
