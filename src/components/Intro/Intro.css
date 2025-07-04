@@ -24,21 +24,54 @@
 .Intro-right {
   width: 60%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100vh;
   box-sizing: border-box;
+  margin-top: 20px;
+  /* ✅ 내부 래퍼에서 수직 정렬을 하므로 기존 p 태그들에는 영향 없음 */
 }
-
-/* 텍스트 효과 */
+.Intro-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 10%;
+  text-align: left;
+  margin-top: 100px; /* ✅ 좌측과 같은 시작점 맞춤 */
+}
+/* 공통 기본 */
 .Intro-fade-line {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.6s ease forwards;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 10px;
+  font-family: 'Pretendard', sans-serif;
+  color: #191919;
+}
+
+/* 좌측 대제목 */
+.Intro-fade-line-L {
   padding-left: 18%;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 48px;
+  animation-delay: 0.2s;
+}
+
+/* 우측 문단 */
+.Intro-fade-line-R {
+  padding: 0 5%;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* ✅ 이미지 스타일 */
+.Intro-bottom-image {
+  width: 80%;
+  max-width: 700px;
+  margin: 24px auto 0; /* ✅ 이미지만 중앙 정렬 */
+  display: block;
+  object-fit: contain;
 }
 
 .Intro-line-1 { 
@@ -88,7 +121,9 @@
     align-items: center;
     justify-content: center;
   }
-
+  .Intro-fade-line {
+  padding-left: 0;
+}
   .fade-line {
     padding-left: 0;
     text-align: center;
@@ -102,4 +137,39 @@
     color: #191919;
 
 }
+}
+@media (max-width: 768px) {
+  .Intro-left {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Intro-right {
+    width: 100%;
+    align-items: center; /* ✅ 우측도 중앙 정렬 */
+    justify-content: center;
+    height: auto;
+  }
+
+  .Intro-text-wrapper {
+    align-items: center;   /* ✅ 텍스트들 중앙 정렬 */
+    text-align: center;
+    margin-top: 60px;      /* 모바일에선 약간 줄여줌 */
+    padding: 0 8%;
+  }
+
+  .Intro-fade-line-L {
+    padding-left: 0;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 150px;
+  }
+
+  .Intro-fade-line-R {
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+  }
 }
