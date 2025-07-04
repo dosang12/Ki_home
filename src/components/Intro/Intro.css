@@ -6,23 +6,19 @@
   min-height: 640px; /* ✅ 최소 높이 확보 */
   width: 100%;
   font-family: 'Pretendard', sans-serif;
-  background-image: url('../images/bg3.png');
+  background-image: url('../images/introbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden; /* 추가해도 되고, 안 해도 됩니다 */
 }
-
-.Intro-left {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+.revealUp {
+  opacity: 0;
+  transform: translateY(100px);
 }
-
 .Intro-right {
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -32,34 +28,32 @@
   /* ✅ 내부 래퍼에서 수직 정렬을 하므로 기존 p 태그들에는 영향 없음 */
 }
 .Intro-text-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   padding: 0 10%;
   text-align: left;
-  margin-top: 100px; /* ✅ 좌측과 같은 시작점 맞춤 */
+  margin-top: 15vh; /* ✅ 좌측과 같은 시작점 맞춤 */
 }
 /* 공통 기본 */
 .Intro-fade-line {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards;
   margin-top: 0;
   margin-bottom: 10px;
   font-family: 'Pretendard', sans-serif;
-  color: #191919;
+  color: rgb(255, 243, 243);
 }
 
-/* 좌측 대제목 */
+/* 상단 소제목 */
 .Intro-fade-line-L {
-  padding-left: 18%;
+  width: 100%;
+  padding: 0 5%;
   font-weight: 700;
-  font-size: 48px;
   animation-delay: 0.2s;
 }
 
-/* 우측 문단 */
+/* 문단 */
 .Intro-fade-line-R {
   padding: 0 5%;
   font-size: 20px;
@@ -67,31 +61,51 @@
 }
 /* ✅ 이미지 스타일 */
 .Intro-bottom-image {
-  width: 80%;
-  max-width: 700px;
-  margin: 24px auto 0; /* ✅ 이미지만 중앙 정렬 */
+  width: 90%;
+  margin: 28px auto 0; /* ✅ 이미지만 중앙 정렬 */
   display: block;
   object-fit: contain;
 }
 
 .Intro-line-1 { 
-  margin-top: 100px;
   animation-delay: 0.2s; 
   font-weight: 700;
-  font-size: 48px;
-    color: #191919;
-
+  font-size: 16px;
+  color: rgb(255, 243, 243);
 }
 
+.Intro-line-2{ 
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: clamp(48px, 4vw, 100vw);
+  color: rgb(255, 243, 243);
+}
+.Intro-line-3{ 
+  margin-top: 2vw;
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  width: 50vw;
+  font-size: clamp(16px, 1.2vw, 100vw);
+  color: rgb(255, 243, 243);
+}
+.Intro-line-4{ 
+  margin-top: 2vw;
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  width: 50vw;
+  font-size: clamp(16px, 1.2vw, 100vw);
+  color: rgb(255, 243, 243);
+}
 .floating-text {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 100%;
   transform: translateY(-100%); /* 텍스트 윗부분이 세로 중앙에 오도록 */
   white-space: nowrap;
   font-size: 164px;
   font-weight: 800;
-  color: rgba(45, 52, 139, 0.05); /* 연한 진청색 */
+  color: rgba(198, 200, 228, 0.1); /* 연한 진청색 */
   animation: floatText 10s linear infinite;
   z-index: 1; /* 배경 위, 콘텐츠 아래로 조정 */
   pointer-events: none; /* 클릭 방해 안 되도록 */
@@ -116,7 +130,7 @@
 
   .Intro-left {
     width: 100%;
-    height: 40vh;
+    height:10vh;
     padding-left: 0;
     align-items: center;
     justify-content: center;
@@ -129,22 +143,8 @@
     text-align: center;
   }
 
-  .line-1 { 
-  margin-top: 150px;
-  animation-delay: 0.2s; 
-  font-weight: 700;
-  font-size: 32px;
-    color: #191919;
-
-}
 }
 @media (max-width: 768px) {
-  .Intro-left {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-  }
 
   .Intro-right {
     width: 100%;
@@ -163,13 +163,25 @@
   .Intro-fade-line-L {
     padding-left: 0;
     text-align: center;
-    font-size: 32px;
-    margin-top: 150px;
+    font-size: 16px;
+    margin-top: 60px !important;
   }
 
   .Intro-fade-line-R {
     padding: 0;
     text-align: center;
-    font-size: 18px;
   }
+  .Intro-line-2{ 
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 100vw);
+  color: rgb(255, 243, 243);
+}
+.Intro-line-3{ 
+  margin-top: 2vw;
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  width: 70vw;
+  font-size: clamp(16px, 1.2vw, 100vw);
+  color: rgb(255, 243, 243);
+}
 }

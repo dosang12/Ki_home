@@ -2,9 +2,168 @@
 
 .Products-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh; /* ↓ 변경 */
+  min-height: 640px; /* ✅ 최소 높이 확보 */
+  width: 100%;
+  font-family: 'Pretendard', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden; /* 추가해도 되고, 안 해도 됩니다 */
+}
+.revealUp {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.Products-right {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
   height: 100vh;
-  background-color: white;
+  box-sizing: border-box;
+  margin-top: 20px;
+  /* ✅ 내부 래퍼에서 수직 정렬을 하므로 기존 p 태그들에는 영향 없음 */
+}
+.Products-text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 10%;
+  text-align: left;
+  margin-top: 15vh; /* ✅ 좌측과 같은 시작점 맞춤 */
+}
+/* 공통 기본 */
+.Products-fade-line {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Pretendard', sans-serif;
+  color: #191919;
+}
+
+/* 상단 소제목 */
+.Products-fade-line-L {
+  width: 100%;
+  padding: 0 5%;
+  font-weight: 700;
+  animation-delay: 0.2s;
+}
+
+/* 문단 */
+.Products-fade-line-R {
+  padding: 0 5%;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* ✅ 이미지 스타일 */
+.Products-bottom-image {
+  width: 90%;
+  margin: 28px auto 0; /* ✅ 이미지만 중앙 정렬 */
+  display: block;
+  object-fit: contain;
+}
+
+.Products-line-1 { 
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  font-size: 16px;
+  color: #191919;
+}
+
+.Products-line-2{ 
+  animation-delay: 0.2s; 
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: clamp(24px, 2.5vw, 100vw);
+  color: #191919;
+}
+
+.floating-text {
+  position: absolute;
+  top: 90%;
+  left: 100%;
+  transform: translateY(-100%); /* 텍스트 윗부분이 세로 중앙에 오도록 */
+  white-space: nowrap;
+  font-size: 164px;
+  font-weight: 800;
+  color: rgba(198, 200, 228, 0.1); /* 연한 진청색 */
+  animation: floatText 10s linear infinite;
+  z-index: 1; /* 배경 위, 콘텐츠 아래로 조정 */
+  pointer-events: none; /* 클릭 방해 안 되도록 */
+  font-family: 'Pretendard', sans-serif;
+}
+
+.kakaomap {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+@keyframes floatText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+   .Products-container {
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  .Products-left {
+    width: 100%;
+    height:10vh;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .Products-fade-line {
+  padding-left: 0;
+}
+  .fade-line {
+    padding-left: 0;
+    text-align: center;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .Products-right {
+    width: 100%;
+    align-items: center; /* ✅ 우측도 중앙 정렬 */
+    justify-content: center;
+    height: auto;
+  }
+
+  .Products-text-wrapper {
+    align-items: center;   /* ✅ 텍스트들 중앙 정렬 */
+    text-align: center;
+    margin-top: 60px;      /* 모바일에선 약간 줄여줌 */
+    padding: 0 8%;
+  }
+
+  .Products-fade-line-L {
+    padding-left: 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 60px !important;
+  }
+
+  .Products-fade-line-R {
+    padding: 0;
+    text-align: center;
+  }
+  .Products-line-2{ 
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 100vw);
+  color: #191919;
+}
+
 }

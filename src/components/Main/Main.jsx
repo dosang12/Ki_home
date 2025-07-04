@@ -7,12 +7,32 @@ import slide3 from '../images/slide3.png';
 import slide4 from '../images/slide4.png';
 import slide5 from '../images/slide5.png';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const sliderImages = [slide1, slide2, slide3, slide4, slide5];
 
 const Main = () => {
   const [current, setCurrent] = useState(0);
   const [progressKey, setProgressKey] = useState(0);
   const timerRef = useRef(null);
+
+  // 👉 GSAP reveal 애니메이션용
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+
+  const addToRefs = (el) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    startSlider();
+    return () => clearInterval(timerRef.current);
+  }, []);
 
   const startSlider = () => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -24,8 +44,34 @@ const Main = () => {
   };
 
   useEffect(() => {
-    startSlider();
-    return () => clearInterval(timerRef.current);
+    revealRefs.current.forEach((elem) => {
+      ScrollTrigger.create({
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom 20%",
+        // markers: true,
+        onEnter: () => {
+          gsap.fromTo(
+            elem,
+            { y: 100, autoAlpha: 0 },
+            { duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto" }
+          );
+        },
+        onLeave: () => {
+          gsap.to(elem, { autoAlpha: 0, overwrite: "auto" });
+        },
+        onEnterBack: () => {
+          gsap.fromTo(
+            elem,
+            { y: -100, autoAlpha: 0 },
+            { duration: 1.25, y: 0, autoAlpha: 1, ease: "back", overwrite: "auto" }
+          );
+        },
+        onLeaveBack: () => {
+          gsap.to(elem, { autoAlpha: 0, overwrite: "auto" });
+        }
+      });
+    });
   }, []);
 
   const handleThumbnailClick = (idx) => {
@@ -37,12 +83,18 @@ const Main = () => {
   return (
     <section id="Main" className="Main-container">
       <div className="Main-left">
-        <p className="fade-line line-1">품질로 증명하는 신뢰,</p>
-        <p className="fade-line line-2">경일에어샤프트</p>
-        <p className="fade-line line-3">
+        <p className="fade-line line-1 revealUp" ref={addToRefs}>
+          품질로 증명하는 신뢰,
+        </p>
+        <p className="fade-line line-2 revealUp" ref={addToRefs}>
+          경일에어샤프트
+        </p>
+        <p className="fade-line line-3 revealUp" ref={addToRefs}>
           30여 년간 쌓아온 기술력과 책임감으로 고객의 만족을 만듭니다.
         </p>
-        <p className="fade-line line-4">경일이 만들어내는 완성도 높은 에어샤프트 솔루션.</p>
+        <p className="fade-line line-4 revealUp" ref={addToRefs}>
+          경일이 만들어내는 완성도 높은 에어샤프트 솔루션.
+        </p>
       </div>
 
       <div className="Main-right">

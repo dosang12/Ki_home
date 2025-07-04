@@ -34,7 +34,7 @@ const GNB = () => {
       <div className={`gnb-menu-slide ${isOpen ? 'open' : ''}`}>
         <div className="gnb-menu-logo">
           <img src={logo} alt="로고" className="slide-logo-image" />
-          <span className="slide-logo-text">경일 에어샤프트</span>
+          <span className="slide-logo-text">경일에어샤프트</span>
         </div>
         <a className='slideone' href="#Intro" onClick={handleToggle}>회사소개</a>
         <a href="#Products" onClick={handleToggle}>오시는길</a>
