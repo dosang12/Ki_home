@@ -18,8 +18,8 @@ const Intro = () => {
     revealRefs.current.forEach((elem) => {
       ScrollTrigger.create({
         trigger: elem,
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 90%",
+        end: "bottom 10%",
         // markers: true, // 개발 중 디버깅용
         onEnter: () => {
           gsap.fromTo(

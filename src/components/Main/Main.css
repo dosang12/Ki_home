@@ -205,7 +205,7 @@
 
   .line-3, .line-4 {
     font-size: 12px;
-    margin-top: 5vh;
+    margin-top: 0.3vh;
   }
 
   .Main-right {
@@ -257,7 +257,6 @@
 }
 
 .line-3 { 
-  margin-top: 70px;
   animation-delay: 0.8s; 
   font-size: 20px;
   color: #191919;
@@ -397,7 +396,7 @@
 }
 
 .line-3 { 
-  margin-top: 5vh;
+  margin-top: 2vh;
   animation-delay: 0.8s; 
   font-size: 12px;
   color: #191919;
