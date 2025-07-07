@@ -104,7 +104,7 @@ const Products = () => {
       });
   }, []);
 
-  const address = '경기 김포시 양촌읍 황금로 117 양촌지방산업단지 E블럭 1롯트 메카존 제나동비131호';
+  const address = '경기 김포시 양촌읍 황금로 117 양촌지방산업단지 E블럭 1롯트 메카존 제나동비 131호';
   const phone = '010-5240-9641';
 
   return (
@@ -131,26 +131,47 @@ const Products = () => {
               <div className="kakaomap" ref={mapContainerRef}></div>
             </div>
 
-            <div className="mapright">
-              <h3 className="maptextSub">경일에어샤프트 오시는 길</h3>
-              <p className="maptext">{address}</p>
-              <button
-                onClick={() => handleCopy(address, 'address')}
-                className="copy-btn"
-              >
-                {copiedField === 'address' ? '복사 완료!' : '주소 복사'}
-              </button>
-              <p className="maptext3"><a className='naver' href="https://naver.me/x9zoNVPy" target="_blank" rel="noopener noreferrer">네이버 지도 보기</a></p>
-              <p className="maptext3"><a className='tmap' href="https://tmap.life/1e5a7205" target="_blank" rel="noopener noreferrer">T맵으로 보기</a></p>
-              <h3 className="maptext2">전화번호</h3>
-              <p className="maptext">{phone}</p>
-              <button
-                onClick={() => handleCopy(phone, 'phone')}
-                className="copy-btn"
-              >
-                {copiedField === 'phone' ? '복사 완료!' : '전화 복사'}
-              </button>
-            </div>
+<div className="mapright">
+  <h3 className="maptextSub">경일에어샤프트 오시는 길</h3>
+  <p className="maptext">{address}</p>
+
+  <div className="button-grid">
+    <button
+      onClick={() => handleCopy(address, 'address')}
+      className="copy-btn"
+    >
+      {copiedField === 'address' ? '복사 완료!' : '주소 복사'}
+    </button>
+    <a
+      className="naver"
+      href="https://naver.me/x9zoNVPy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      네이버 지도 보기
+    </a>
+    <a
+      className="tmap"
+      href="https://tmap.life/1e5a7205"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      T맵으로 보기
+    </a>
+  </div>
+
+  <h3 className="maptext2">전화번호</h3>
+  <p className="maptext">{phone}</p>
+ <div className="button-grid">
+    <button
+      onClick={() => handleCopy(phone, 'phone')}
+      className="copy-btn"
+    >
+      {copiedField === 'phone' ? '복사 완료!' : '전화 복사'}
+    </button>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

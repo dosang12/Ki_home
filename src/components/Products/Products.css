@@ -4,19 +4,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: auto;
-  height: auto;  /* ✅ 콘텐츠 길이만큼 확장 */
+  min-height: 100vh;
+  height: auto;
   font-family: 'Pretendard', sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  overflow: visible; /* ✅ 세로 넘침 허용 */
+  overflow: visible;
 }
+
 .revealUp {
   opacity: 0;
   transform: translateY(100px);
 }
+
 .Products-right {
   width: 100%;
   display: flex;
@@ -25,7 +27,6 @@
   height: auto;
   box-sizing: border-box;
   margin-top: 20px;
-  /* ✅ 내부 래퍼에서 수직 정렬을 하므로 기존 p 태그들에는 영향 없음 */
 }
 
 .Products-text-wrapper {
@@ -36,9 +37,9 @@
   gap: 16px;
   padding: 0 10%;
   text-align: left;
-  margin-top: 10vh; 
+  margin-top: 10vh;
 }
-/* 공통 기본 */
+
 .Products-fade-line {
   margin-top: 0;
   margin-bottom: 10px;
@@ -46,7 +47,6 @@
   color: #191919;
 }
 
-/* 상단 소제목 */
 .Products-fade-line-L {
   width: 100%;
   padding: 0 5%;
@@ -54,29 +54,28 @@
   animation-delay: 0.2s;
 }
 
-/* 문단 */
 .Products-fade-line-R {
   padding: 0 5%;
   font-size: 20px;
   font-weight: 700;
 }
-/* ✅ 이미지 스타일 */
+
 .Products-bottom-image {
   width: 90%;
-  margin: 28px auto 0; /* ✅ 이미지만 중앙 정렬 */
+  margin: 28px auto 0;
   display: block;
   object-fit: contain;
 }
 
-.Products-line-1 { 
-  animation-delay: 0.2s; 
+.Products-line-1 {
+  animation-delay: 0.2s;
   font-weight: 700;
   font-size: 16px;
   color: #191919;
 }
 
-.Products-line-2{ 
-  animation-delay: 0.2s; 
+.Products-line-2 {
+  animation-delay: 0.2s;
   font-weight: 700;
   line-height: 1.3;
   font-size: clamp(24px, 2.5vw, 100vw);
@@ -87,20 +86,21 @@
   position: absolute;
   top: 90%;
   left: 100%;
-  transform: translateY(-100%); /* 텍스트 윗부분이 세로 중앙에 오도록 */
+  transform: translateY(-100%);
   white-space: nowrap;
   font-size: 164px;
   font-weight: 800;
-  color: rgba(198, 200, 228, 0.1); /* 연한 진청색 */
+  color: rgba(198, 200, 228, 0.1);
   animation: floatText 10s linear infinite;
-  z-index: 1; /* 배경 위, 콘텐츠 아래로 조정 */
-  pointer-events: none; /* 클릭 방해 안 되도록 */
+  z-index: 1;
+  pointer-events: none;
   font-family: 'Pretendard', sans-serif;
 }
+
 .Products-map-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 세로 정렬 옵션 */
+  align-items: flex-start;
   gap: 40px;
   width: 90%;
   height: 100%;
@@ -128,24 +128,52 @@
   padding-left: 40px;
   font-family: 'Pretendard', sans-serif;
 }
-.maptextSub{
+
+.maptextSub {
   margin: 0 0 16px 0;
-  font-size: 2vw;
+  font-size: clamp(18px, 2vw, 100px);
+  
 }
-.maptext{
+
+.maptext {
   margin-bottom: 10px;
+  font-size: clamp(12px, 1vw, 24px);
 }
-.maptext2{
+
+.maptext2 {
   margin: 30px 0 0 0;
-  font-size: 2vw;
+  font-size: clamp(18px, 2vw, 100px);
 }
+
+/* ✅ 버튼 통일 스타일 + 세로 중앙 정렬 */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.button-grid button,
+.button-grid a {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* 복사 버튼 */
 .copy-btn {
-  padding: 8px 14px;
   background-color: #001f85;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -153,56 +181,54 @@
 .copy-btn:hover {
   background-color: #2a5cf1;
 }
-.maptext3{
-  margin-top: 20px;
-  border: none;
-}
+
+/* 네이버 버튼 */
 .naver {
-  padding: 8px 24px;
-  font-size: 20px;
-  font-weight: 600;
-  border: 1px solid #191919;
-  border-radius: 10px;
   color: #00C73C;
-  text-decoration: none;
-  position: inherit;
+  background-color: #e7fbe7;
 }
-.tmap{
-  padding: 8px 24px;
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 600;
-   border: 1px solid #191919;
-  border-radius: 10px;
+
+/* T맵 버튼 */
+.tmap {
   color: #3617ce;
-  text-decoration: none;
-position: inherit;
+  background-color: #e9e8ff;
 }
 
 @media (max-width: 768px) {
-  
   .Products-map-wrapper {
     flex-direction: column;
     padding: 20px;
-    height: auto;           /* ✅ 높이 고정하지 않기 */
+    height: auto;
   }
-    .map {
+
+  .map {
     width: 100%;
-    height: auto;           /* ✅ 고정값 대신 콘텐츠에 따라 늘어나게 */
-    min-height: 250px;      /* ✅ 최소 높이만 설정 */
+    height: auto;
+    min-height: 250px;
     margin-bottom: 20px;
   }
 
   .kakaomap {
     width: 100%;
     height: 100%;
-    min-height: 250px;      /* ✅ 여기도 동일하게 */
+    min-height: 250px;
   }
+
   .mapright {
     width: 100%;
     padding: 0;
   }
-  
+
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-grid button,
+  .button-grid a {
+    width: 100%;
+    font-size: 14px;
+    white-space: normal;
+  }
 }
 
 @keyframes floatText {
@@ -216,7 +242,7 @@ position: inherit;
 
 /* 반응형 */
 @media (max-width: 768px) {
-    .Products-container {
+  .Products-container {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -228,35 +254,34 @@ position: inherit;
 
   .Products-left {
     width: 100%;
-    height:10vh;
+    height: 10vh;
     padding-left: 0;
     align-items: center;
     justify-content: center;
   }
+
   .Products-fade-line {
-  padding-left: 0;
-}
+    padding-left: 0;
+  }
+
   .fade-line {
     padding-left: 0;
     text-align: center;
   }
 
-}
-@media (max-width: 768px) {
-
   .Products-right {
     width: 100%;
-    align-items: center; /* ✅ 우측도 중앙 정렬 */
+    align-items: center;
     justify-content: flex-start;
     height: auto;
     flex-direction: column;
-    overflow: visible; 
+    overflow: visible;
   }
 
   .Products-text-wrapper {
-    align-items: center;   /* ✅ 텍스트들 중앙 정렬 */
+    align-items: center;
     text-align: center;
-    margin-top: 20px;      /* 모바일에선 약간 줄여줌 */
+    margin-top: 20px;
     width: 90%;
   }
 
@@ -271,10 +296,10 @@ position: inherit;
     padding: 0;
     text-align: center;
   }
-  .Products-line-2{ 
-  font-weight: 700;
-  font-size: clamp(24px, 4vw, 100vw);
-  color: #191919;
-}
 
+  .Products-line-2 {
+    font-weight: 700;
+    font-size: clamp(24px, 4vw, 100vw);
+    color: #191919;
+  }
 }
