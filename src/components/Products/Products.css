@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: visible;
+  overflow-x: hidden; /* 추가 */
 }
 
 .revealUp {
@@ -43,8 +44,8 @@
 .Products-fade-line {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: 'Pretendard', sans-serif;
   color: #191919;
+  font-family: 'Pretendard', sans-serif;
 }
 
 .Products-fade-line-L {
@@ -52,29 +53,12 @@
   padding: 0 5%;
   font-weight: 700;
   animation-delay: 0.2s;
-}
-
-.Products-fade-line-R {
-  padding: 0 5%;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.Products-bottom-image {
-  width: 90%;
-  margin: 28px auto 0;
-  display: block;
-  object-fit: contain;
-}
-
-.Products-line-1 {
-  animation-delay: 0.2s;
-  font-weight: 700;
   font-size: 16px;
   color: #191919;
 }
 
-.Products-line-2 {
+.Products-fade-line-R {
+  padding: 0 5%;
   animation-delay: 0.2s;
   font-weight: 700;
   line-height: 1.3;
@@ -95,6 +79,7 @@
   z-index: 1;
   pointer-events: none;
   font-family: 'Pretendard', sans-serif;
+  will-change: transform; /* 최적화 */
 }
 
 .Products-map-wrapper {
@@ -131,8 +116,7 @@
 
 .maptextSub {
   margin: 0 0 16px 0;
-  font-size: clamp(18px, 2vw, 100px);
-  
+  font-size: clamp(18px, 1.8vw, 100px);
 }
 
 .maptext {
@@ -142,10 +126,9 @@
 
 .maptext2 {
   margin: 30px 0 0 0;
-  font-size: clamp(18px, 2vw, 100px);
+  font-size: clamp(18px, 1.8vw, 100px);
 }
 
-/* ✅ 버튼 통일 스타일 + 세로 중앙 정렬 */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -194,7 +177,46 @@
   background-color: #e9e8ff;
 }
 
+/* 반응형 스타일 */
 @media (max-width: 768px) {
+  .Products-container {
+    width: 95%;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .Products-right {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .Products-text-wrapper {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .Products-fade-line,
+  .Products-fade-line-L,
+  .Products-fade-line-R {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Products-fade-line-L {
+    font-size: 16px;
+    margin-top: 20px !important;
+  }
+
+  .Products-fade-line-R {
+    font-size: clamp(24px, 4vw, 100vw);
+  }
+
   .Products-map-wrapper {
     flex-direction: column;
     padding: 20px;
@@ -209,8 +231,6 @@
   }
 
   .kakaomap {
-    width: 100%;
-    height: 100%;
     min-height: 250px;
   }
 
@@ -237,69 +257,5 @@
   }
   100% {
     left: -100%;
-  }
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .Products-container {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    min-height: 100vh;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: visible;
-  }
-
-  .Products-left {
-    width: 100%;
-    height: 10vh;
-    padding-left: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Products-fade-line {
-    padding-left: 0;
-  }
-
-  .fade-line {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .Products-right {
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    height: auto;
-    flex-direction: column;
-    overflow: visible;
-  }
-
-  .Products-text-wrapper {
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    width: 90%;
-  }
-
-  .Products-fade-line-L {
-    padding-left: 0;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 20px !important;
-  }
-
-  .Products-fade-line-R {
-    padding: 0;
-    text-align: center;
-  }
-
-  .Products-line-2 {
-    font-weight: 700;
-    font-size: clamp(24px, 4vw, 100vw);
-    color: #191919;
   }
 }

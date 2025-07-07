@@ -3,8 +3,149 @@
 .CS-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  font-family: 'Pretendard', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  background-color: rgb(233, 233, 233);
+}
+
+.revealUp {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.CS-right {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
-  height: 100vh;
-  background-color: #F2F2F2;
+  height: auto;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.CS-text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 10%;
+  margin-top: 10vh;
+  text-align: left;
+}
+
+.CS-fade-line {
+  color: #191919;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.CS-fade-line-L {
+  width: 100%;
+  padding: 0 5%;
+  font-weight: 700;
+  animation-delay: 0.2s;
+  font-size: 16px;
+}
+
+.CS-fade-line-R {
+  padding: 0 5%;
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: clamp(24px, 2.5vw, 100vw);
+  animation-delay: 0.2s;
+  color: #191919;
+}
+
+.CS-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  margin: 40px auto 0;
+  box-sizing: border-box;
+}
+
+.CS-left-panel,
+.CS-right-panel {
+  width: 50%;
+  padding: 20px 40px;
+  background-color: #f7f8fc;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+.CS-title-m{
+  font-size: clamp(18px, 1.5vw, 100px);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.CS-title{
+ font-size: clamp(16px, 1.3vw, 100px);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 번호와 버튼 간 여백 */
+  margin-bottom: 8px;
+}
+
+.contact-line p {
+  font-size: 16px;
+}
+
+.copy-btn-cs {
+  padding: 6px 14px;
+  background-color: #001f85;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-btn-cs:hover {
+  background-color: #2a5cf1;
+}
+.warning{
+  font-size: clamp(18px, 1.3vw, 100px);
+  color: #001f85;
+  font-weight: 600;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .CS-text-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .CS-fade-line,
+  .CS-fade-line-L,
+  .CS-fade-line-R {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .CS-fade-line-L {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .CS-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .CS-left-panel,
+  .CS-right-panel {
+    width: 100%;
+  }
 }

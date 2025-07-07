@@ -5,7 +5,7 @@ import Main from './components/Main/Main';
 import Intro from './components/Intro/Intro';
 import Products from './components/Products/Products';
 import CS from './components/CS/CS';
-import Qna from './components/Qna/Qna';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ const App = () => {
         <LoadingScreen setLoading={setLoading} />
       ) : (
         <>
-          <GNB/><Main/><Intro/><Products/><CS/><Qna/>
+          <GNB/><Main/><Intro/><Products/><CS/><Footer/>
         </>
       )}
     </div>

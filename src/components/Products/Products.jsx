@@ -129,7 +129,7 @@ const Products = () => {
           <div className="Products-map-wrapper">
             <div className="map">
               <div className="kakaomap" ref={mapContainerRef}></div>
-            </div>
+       </div>
 
 <div className="mapright">
   <h3 className="maptextSub">경일에어샤프트 오시는 길</h3>
