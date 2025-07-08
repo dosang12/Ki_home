@@ -25,7 +25,6 @@ const CS = () => {
     });
   };
 
-  // GSAP Scroll Trigger
   useEffect(() => {
     revealRefs.current.forEach((elem) => {
       ScrollTrigger.create({
@@ -58,7 +57,6 @@ const CS = () => {
 
   return (
     <section id="CS" className="CS-container">
-
       <div className="CS-right">
         <div className="CS-text-wrapper">
           <p className="CS-fade-line CS-fade-line-L revealUp" ref={addToRefs}>
@@ -69,44 +67,74 @@ const CS = () => {
           </p>
 
           <div className="CS-content-wrapper">
+            {/* 왼쪽 패널 */}
             <div className="CS-left-panel">
-              <h3 className='CS-title-m'>이메일, 전화, 팩스를 통해 문의하실 수 있습니다.</h3>
-              <h3 className='CS-title'>대표번호</h3>
-              <div className="contact-line">
-              <p>010-5240-9641</p>
-              <button className="copy-btn-cs" onClick={() => handleCopy('010-5240-9641', 'number1')}>
-                {copiedField === 'number1' ? '복사 완료!' : '복사'}
-              </button>
+              <h3 className="CS-title-m">연락처</h3>
+              <hr className="cs-divider" />
+
+              {/* 대표번호 */}
+              <div className="CS-title-line">
+                <h3 className="CS-title">대표번호</h3>
+                <div className="contact-line">
+                  <p>010-5240-9641</p>
+                  <button
+                    className="copy-btn-cs"
+                    onClick={() => handleCopy('010-5240-9641', 'number1')}
+                  >
+                    {copiedField === 'number1' ? '복사 완료!' : '복사'}
+                  </button>
+                </div>
+              </div>
+
+              <div className="CS-title-line">
+                <div className="contact-line">
+                  <p>010-3703-8356</p>
+                  <button
+                    className="copy-btn-cs"
+                    onClick={() => handleCopy('010-3703-8356', 'number2')}
+                  >
+                    {copiedField === 'number2' ? '복사 완료!' : '복사'}
+                  </button>
+                </div>
+              </div>
+
+              {/* 팩스 */}
+              <div className="CS-title-line">
+                <h3 className="CS-title">팩스</h3>
+                <div className="contact-line">
+                  <p>031-987-9249</p>
+                  <button
+                    className="copy-btn-cs"
+                    onClick={() => handleCopy('031-987-9249', 'fax')}
+                  >
+                    {copiedField === 'fax' ? '복사 완료!' : '복사'}
+                  </button>
+                </div>
+              </div>
+
+              {/* 이메일 */}
+              <div className="CS-title-line">
+                <h3 className="CS-title">이메일</h3>
+                <div className="contact-line">
+                  <p>kyungil9641@hanmail.net</p>
+                  <button
+                    className="copy-btn-cs"
+                    onClick={() => handleCopy('kyungil9641@hanmail.net', 'email')}
+                  >
+                    {copiedField === 'email' ? '복사 완료!' : '복사'}
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <div className="contact-line">
-              <p>010-3703-8356</p>
-              <button className="copy-btn-cs" onClick={() => handleCopy('010-3703-8356', 'number2')}>
-                {copiedField === 'number2' ? '복사 완료!' : '복사'}
-              </button>
-            </div>
-            <h3 className='CS-title'>팩스</h3>
-              <div className="contact-line">
-              <p>031-987-9249</p>
-              <button className="copy-btn-cs" onClick={() => handleCopy('031-987-9249', 'fax')}>
-                {copiedField === 'fax' ? '복사 완료!' : '복사'}
-              </button>
-            </div>
-             <h3 className='CS-title'>이메일</h3>
-              <div className="contact-line">
-              <p>kyungil9641@hanmail.net</p>
-              <button className="copy-btn-cs" onClick={() => handleCopy('kyungil9641@hanmail.net', 'email')}>
-                {copiedField === 'email' ? '복사 완료!' : '복사'}
-              </button>
-            </div>
-            </div>
-
+            {/* 오른쪽 패널 */}
             <div className="CS-right-panel">
-              <h3 className='CS-title-m'>운영 시간</h3>
+              <h3 className="CS-title-m">운영 시간</h3>
+              <hr className="cs-divider" />
               <p>평일 오전 9시 ~ 오후 6시</p>
               <p>토요일 오전 9시 ~ 오후 4시</p>
               <p>일요일 및 공휴일은 휴무입니다.</p>
-              <p className='warning'>※토요일 방문 시 사전 연락 필수.</p>
+              <p className="warning">토요일 방문을 원하시는 경우, 미리 연락 주시면 감사하겠습니다.</p>
             </div>
           </div>
         </div>
