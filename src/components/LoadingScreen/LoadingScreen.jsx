@@ -15,7 +15,7 @@ useEffect(() => {
 
   return (
     <div className={`loading-container ${fadeOut ? 'fade-out' : ''}`}>
-      <div className="loading-text">경일 에어샤프트</div>
+      <div className="loading-text">경일에어샤프트</div>
       <div className="loading-line"></div>
     </div>
   );
