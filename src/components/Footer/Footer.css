@@ -1,10 +1,71 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+.footer-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Pretendard', sans-serif;
+  color: #191919;
+  font-size: 14px;
+}
 
-.Footer-container {
+.footer-logo img {
+  width: 160px;
+  margin-bottom: 24px;
+}
+
+.footer-info-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
-  background-color: #ffffff ;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-info-group p {
+  margin: 0;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+
+.footer-info-group .divider {
+  color: #999;
+  font-size: 13px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 5%;
+    text-align: center;
+  }
+.footer-logo  {
+  margin: 0 auto;
+}
+  .footer-left, .footer-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-left {
+    margin-bottom: 24px;
+  }
+
+  .footer-left-item {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    max-width: 120px;
+  }
 }
