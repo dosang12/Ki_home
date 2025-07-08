@@ -114,13 +114,13 @@ const Products = () => {
       <div className="Products-right">
         <div className="Products-text-wrapper">
           <p
-            className="Products-fade-line Products-fade-line-L Products-line-1 revealUp"
+            className="Products-fade-line Products-fade-line-L revealUp"
             ref={addToRefs}
           >
             오시는길
           </p>
           <p
-            className="Products-fade-line Products-fade-line-R Products-line-2 revealUp"
+            className="Products-fade-line Products-fade-line-R revealUp"
             ref={addToRefs}
           >
             보다 편리하게 방문하실 수 있도록 위치 정보를 안내드립니다.
