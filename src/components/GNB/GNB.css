@@ -1,5 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
+html, body {
+  overflow-x: hidden;
+}
 .gnb {
   position: fixed;
   top: 0;
@@ -95,7 +97,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 60%;
+    width: 70%;
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);

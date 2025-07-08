@@ -27,7 +27,7 @@ const GNB = () => {
       <a href="#Intro" onClick={handleToggle}>회사소개</a>
       <a href="#Products" onClick={handleToggle}>오시는길</a>
       <a href="#CS" onClick={handleToggle}>고객지원</a>
-      <a href="#Qna" onClick={handleToggle}>문의하기</a>
+      <a href="#CS" onClick={handleToggle}>문의하기</a>
     </div>
   </div>
   
@@ -39,7 +39,7 @@ const GNB = () => {
         <a className='slideone' href="#Intro" onClick={handleToggle}>회사소개</a>
         <a href="#Products" onClick={handleToggle}>오시는길</a>
         <a href="#CS" onClick={handleToggle}>고객지원</a>
-        <a href="#Qna" onClick={handleToggle}>문의하기</a>
+        <a href="#CS" onClick={handleToggle}>문의하기</a>
       </div>
     </nav>
   );
