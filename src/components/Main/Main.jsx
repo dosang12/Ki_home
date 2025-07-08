@@ -47,8 +47,8 @@ const Main = () => {
     revealRefs.current.forEach((elem) => {
       ScrollTrigger.create({
         trigger: elem,
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 90%",
+        end: "bottom 10%",
         // markers: true,
         onEnter: () => {
           gsap.fromTo(
