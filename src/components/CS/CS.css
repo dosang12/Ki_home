@@ -54,6 +54,7 @@
 
 .CS-fade-line-R {
   padding: 0 5%;
+  margin: 1vh 0 2vh 0;
   font-weight: 700;
   line-height: 1.3;
   font-size: clamp(24px, 2.5vw, 100vw);
