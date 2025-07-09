@@ -105,7 +105,8 @@ const Products = () => {
   }, []);
 
   const address = '경기 김포시 양촌읍 황금로 117 양촌지방산업단지 E블럭 1롯트 메카존 제나동비 131호';
-  const phone = '010-5240-9641';
+  const phone1 = '010-5240-9641';
+  const phone2 = '010-3703-8356';
 
   return (
     <section id="Products" className="Products-container">
@@ -161,10 +162,19 @@ const Products = () => {
   </div>
 
   <h3 className="maptext2">전화번호</h3>
-  <p className="maptext">{phone}</p>
+  <p className="maptext">{phone1}</p>
  <div className="button-grid">
     <button
-      onClick={() => handleCopy(phone, 'phone')}
+      onClick={() => handleCopy(phone1, 'phone1')}
+      className="copy-btn"
+    >
+      {copiedField === 'phone' ? '복사 완료!' : '전화 복사'}
+    </button>
+  </div>
+    <p className="maptext">{phone2}</p>
+ <div className="button-grid">
+    <button
+      onClick={() => handleCopy(phone2, 'phone2')}
       className="copy-btn"
     >
       {copiedField === 'phone' ? '복사 완료!' : '전화 복사'}
