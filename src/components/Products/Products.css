@@ -180,7 +180,7 @@
 /* 반응형 스타일 */
 @media (max-width: 768px) {
   .Products-container {
-    width: 95%;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: visible;
   }
@@ -192,6 +192,7 @@
     height: auto;
     flex-direction: column;
     overflow: visible;
+    margin: 0 auto;
   }
 
   .Products-text-wrapper {
@@ -199,6 +200,7 @@
     text-align: center;
     margin-top: 20px;
     width: 90%;
+    padding: 0;
   }
 
   .Products-fade-line,
