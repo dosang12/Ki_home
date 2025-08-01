@@ -1,71 +1,37 @@
-# Getting Started with Create React App
-https://ki-home-76qi.vercel.app/
+# 경일에어샤프트 홈페이지 구축 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 기획, 디자인, 퍼블리싱까지 **단독으로 진행한 All-in-One 웹 프로젝트**입니다.  
+> 반응형 대응은 물론, 실제 도메인 연결과 Vercel 자동 배포까지 완료된 실서비스용 사이트입니다.
 
-## Available Scripts
+## 📌 프로젝트 개요
 
-In the project directory, you can run:
+- **프로젝트명**: 경일에어샤프트 공식 홈페이지
+- **진행 시점**: 2025년 7월
+- **담당 역할**: 100% 단독 수행 (기획 / 디자인 / 퍼블리싱 / 배포)
+- **배포 주소**: [https://www.kyungilairshaft.com](https://www.kyungilairshaft.com)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 기술 스택
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React (CRA)
+- HTML5 / CSS3
+- JavaScript (ES6+)
+- GSAP (ScrollTrigger 포함)
+- Git + GitHub
+- Vercel (자동배포 + 도메인 연결)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🌟 주요 구현 요소
 
-### `npm run build`
+| 기능 영역        | 설명 |
+|------------------|------|
+| 슬라이더         | 메인 이미지 자동 슬라이드 / 썸네일 클릭 연동 / 프로그레스 바 포함 |
+| 텍스트 애니메이션 | GSAP ScrollTrigger를 활용한 텍스트 순차 등장 효과 |
+| 반응형 레이아웃   | PC / 태블릿 / 모바일 환경에서 화면 최적화 |
+| 실시간 배포 연동  | GitHub main 브랜치 커밋 → Vercel 자동 배포 적용 |
+| SEO 기본 설정    | `meta`, `og:title`, `robots.txt`, `sitemap.xml`, favicon 구성 |
+| 도메인 연결       | 카페24에서 구매한 도메인을 Vercel 프로젝트에 CNAME 설정으로 연동 |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

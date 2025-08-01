@@ -3,7 +3,7 @@ import './Footer.css';
 import logo from '../images/logo.png';
 const Footer = () => {
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" aria-label="경일에어샤프트 오시는 길 안내">
       <div className="footer-logo">
       <img src={logo} alt="회사 로고" className="에어샤프트 footer-logo" />
       </div>
