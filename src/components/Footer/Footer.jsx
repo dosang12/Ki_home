@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-logo">
-      <img src={logo} alt="회사 로고" className="footer-logo" />
+      <img src={logo} alt="회사 로고" className="에어샤프트 footer-logo" />
       </div>
       <div className="footer-info-group">
         <p>경기 김포시 양촌읍 황금로 117 양촌지방산업단지 E블럭 1롯트 메카존 제나동 비 131호</p>

@@ -81,14 +81,14 @@ const Main = () => {
   };
 
   return (
-    <section id="Main" className="Main-container">
+    <section id="Main" className="Main-container" aria-label="경일에어샤프트 메인 소개">
       <div className="Main-left">
-        <p className="fade-line line-1 revealUp" ref={addToRefs}>
+        <h2 className="fade-line line-1 revealUp" ref={addToRefs}>
           품질로 증명하는 신뢰,
-        </p>
-        <p className="fade-line line-2 revealUp" ref={addToRefs}>
+        </h2>
+        <h1 className="fade-line line-2 revealUp" ref={addToRefs}>
           경일에어샤프트
-        </p>
+        </h1>
         <p className="fade-line line-3 revealUp" ref={addToRefs}>
           30여 년간 쌓아온 기술력과 책임감으로 고객의 만족을 만듭니다.
         </p>
@@ -104,7 +104,7 @@ const Main = () => {
               <img
                 key={`main-img-${idx}`}
                 src={img}
-                alt={`메인 슬라이드 이미지 ${idx + 1}`}
+                alt={`고정밀 에어샤프트 제품 이미지 ${idx + 1}`}
                 className={`slide-image ${current === idx ? 'active' : ''}`}
               />
             ))}
@@ -115,7 +115,7 @@ const Main = () => {
               <img
                 key={`thumb-img-${idx}`}
                 src={img}
-                alt={`썸네일 이미지 ${idx + 1}`}
+                alt={`에어샤프트 썸네일 이미지 ${idx + 1}`}
                 className={current === idx ? 'active' : ''}
                 onClick={() => handleThumbnailClick(idx)}
               />

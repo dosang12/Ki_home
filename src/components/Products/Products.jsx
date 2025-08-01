@@ -109,7 +109,7 @@ const Products = () => {
   const phone2 = '010-3703-8356';
 
   return (
-    <section id="Products" className="Products-container">
+    <section id="Products" className="Products-container" aria-label="경일에어샤프트 오시는 길 안내">
       <div className="floating-text">Kyungil Airshaft</div>
 
       <div className="Products-right">

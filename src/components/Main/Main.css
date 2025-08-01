@@ -145,6 +145,7 @@
 
 .line-2 { 
   animation-delay: 0.4s; 
+  margin-bottom: 2vh;
   font-weight: 700;
   font-size: 4vw;
   color: #2D348B;

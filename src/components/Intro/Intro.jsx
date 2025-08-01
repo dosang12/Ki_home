@@ -46,7 +46,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <section id="Intro" className="Intro-container">
+    <section id="Intro" className="Intro-container" aria-label="경일에어샤프트 회사소개">
       <div className="floating-text">Kyungil Airshaft</div>
 
       <div className="Intro-right">

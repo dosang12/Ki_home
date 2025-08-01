@@ -10,11 +10,11 @@ const GNB = () => {
   };
 
   return (
-<nav className="gnb">
+<nav className="gnb" role="navigation" aria-label="경일에어샤프트 메인 내비게이션" >
   <div className="gnb-wrapper">
     <div className="gnb-logo">
       <a href="#Main" className="logo-l">
-        <img src={logo} alt="로고" className="logo-image" />
+        <img src={logo} alt="로고" className="경일 에어샤프트 logo-image" />
         <span className="logo-text">경일에어샤프트</span>
       </a>
     </div>

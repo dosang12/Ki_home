@@ -56,7 +56,7 @@ const CS = () => {
   }, []);
 
   return (
-    <section id="CS" className="CS-container">
+    <section id="CS" className="CS-container" aria-label="경일에어샤프트 고객문의">
       <div className="CS-right">
         <div className="CS-text-wrapper">
           <p className="CS-fade-line CS-fade-line-L revealUp" ref={addToRefs}>
